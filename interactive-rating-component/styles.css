@@ -1,0 +1,277 @@
+
+:root {
+    --clr-primary-orange: hsl(25, 97%, 53%);
+    --clr-primary-orange2: hsl(25, 77%, 53%);
+    --clr-primary-orange3: hsl(25, 77%, 83%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-medium-grey: hsl(216, 12%, 54%);
+    --clr-dark-blue: hsl(213, 19%, 18%);
+    --clr-dark-blue2: hsl(213, 19%, 20%);
+    --clr-very-dark-blue: hsl(216, 12%, 8%);
+
+    --ff-base: "Overpass", sans-seriff;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+}
+
+
+/* Reset default values */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    line-height: 0.5;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* My CSS */
+
+body {
+    --content-margin: 2rem 2rem;
+    --content-padding: 2rem 2rem;
+    --content-spacing: 1.5rem;
+    --card-width: 412px;
+
+    background-color: var(--clr-very-dark-blue);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 15px;
+    display: grid;
+    place-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Card */
+.card__content {
+    margin: var(--content-margin);
+    padding: var(--content-margin);
+    background-color: var(--clr-dark-blue);
+    border-radius: 2rem;
+    display: grid;
+    gap: var(--content-spacing);
+    max-width: var(--card-width);
+}
+
+@media (max-width: 376px) {
+    .card__content {
+        margin: 1.5rem 1.5rem;
+        padding: 1.5rem 2rem;
+        gap: 1.125rem;
+        border-radius: 1rem;
+    }
+
+}
+
+
+.card__icon {
+    background-color: var(--clr-dark-blue2);
+    aspect-ratio: 1 / 1;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+}
+
+@media (max-width: 376px) {
+    .card__icon {
+        height: 40px;
+    }
+
+}
+
+.card__header {
+    font-weight: var(--fw-regular);
+    color: var(--clr-white);
+    font-size: 1.125rem;
+    text-space: 1px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 376px) {
+    .card__header {
+        font-size: 0.85rem;
+    }
+
+}
+
+.card__text {
+    color: var(--clr-light-grey);
+}
+
+@media (max-width: 376px) {
+    .card__text {
+        line-height: 1.6;
+        font-size: .8125rem;
+    }
+
+}
+
+
+.card__score {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.score {
+    background-color: var(--clr-dark-blue2);
+    width: 42px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    color: var(--clr-light-grey);
+    cursor: pointer;
+
+}
+
+.score:is(:hover, :focus) {
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-white);
+    transition: background-color 0.25s;
+}
+
+.button {
+    border: none;
+    border-radius: 2rem;
+    padding: .75rem 1rem;
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+@media (max-width: 376px) {
+    .button {
+        padding: .5rem 1rem
+    }
+}
+
+.button:hover {
+    background-color: var(--clr-primary-orange3);
+    color: var(--clr-primary-orange);
+    transition: background-color 0.25s;
+}
+
+
+/* Thank You */
+.submit__content {
+    margin: var(--content-margin);
+    padding: 2.875rem 2.125rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: 2rem;
+    gap: 1.825rem;
+    max-width: var(--card-width);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+@media (max-width: 376px) {
+    .submit__content {
+        margin: 1.5rem 1.5rem;
+        padding: 1.5rem 2rem;
+        gap: 1.125rem;
+        border-radius: 1rem;
+    }
+
+}
+
+.submit__score {
+    display: grid;
+    color: var(--clr-primary-orange2);
+    background-color: var(--clr-dark-blue2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2rem;
+}
+
+.submit__header {
+    color: var(--clr-white);
+    margin: 1rem 0 0 0;
+    font-weight: var(--fw-bold);
+    font-size: 1.125rem;
+
+}
+
+.submit__text {
+    color: var(--clr-light-grey);
+    line-height: 1.6;
+}
+
+
+@media (max-width: 376px) {
+
+    .submit__score {
+        font-size: 0.8125rem;
+    }
+
+    .submit__text {
+        font-size: 0.825rem;
+    }
+}
