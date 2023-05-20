@@ -24,5 +24,7 @@ button.addEventListener('click', () => {
         card.classList.toggle('hidden')
         submit_card.classList.toggle('hidden')
         doc_score.innerText = selected_score
+    }else {
+        alert('Please select a score')
     }
 })
