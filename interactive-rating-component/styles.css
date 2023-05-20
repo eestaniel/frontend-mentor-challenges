@@ -184,6 +184,7 @@ body {
     border-radius: 100%;
     color: var(--clr-light-grey);
     cursor: pointer;
+    border: none;
 
 }
 
