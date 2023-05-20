@@ -1,6 +1,8 @@
 :root {
     --clr-primary-400: hsl(215, 51%, 70%);
+    --clr-secondary-300: hsl(182, 95%, 55%);
     --clr-secondary-400: hsl(178, 100%, 50%);
+    --clr-secondary-500: hsl(188, 99%, 38%);
 
     --clr-neutral-100: hsl(0, 0%, 100%); /* header / user*/
     --clr-neutral-200: hsl(217, 28%, 63%); /* text*/
@@ -57,7 +59,6 @@ body {
 }
 
 
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
@@ -104,9 +105,32 @@ body {
 }
 
 .card__image {
+    position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
+    cursor: pointer;
 }
+
+.card__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr-secondary-300);  /* set your overlay color */
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.1s ease; /* for smooth transition */
+}
+
+
+.card__image:hover::before {
+    opacity: 0.75;
+}
+
 
 .card__header {
     margin-top: 0.5rem;
@@ -115,11 +139,15 @@ body {
     font-size: 1.3125rem;
 }
 
+.card__header:hover {
+    color: var(--clr-secondary-300);
+    cursor: pointer;
+}
+
 .card__text {
     font-weight: var(--fw-light);
     font-size: 1rem;
 }
-
 
 
 .card__flex-group-price {
@@ -127,6 +155,7 @@ body {
     justify-content: space-between;
     justify-items: center;
 }
+
 .price-coin {
     display: flex;
     flex-wrap: wrap;
@@ -135,6 +164,7 @@ body {
     color: var(--clr-secondary-400);
     font-size: 1rem;
 }
+
 .coin-icon[data-type="coin"] {
     content: "";
     width: 11px;
@@ -172,7 +202,7 @@ body {
     gap: 1rem;
 }
 
-.seller-icon{
+.seller-icon {
     height: auto;
     width: 2rem;
     aspect-ratio: 1/1;
@@ -189,6 +219,11 @@ body {
 
 .seller-name {
     color: var(--clr-neutral-100);
+}
+
+.seller-name:hover {
+    color: var(--clr-secondary-300);
+    cursor: pointer;
 }
 
 
