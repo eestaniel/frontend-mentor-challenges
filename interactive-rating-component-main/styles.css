@@ -1,6 +1,7 @@
 
 :root {
     --clr-primary-orange: hsl(25, 97%, 53%);
+    --clr-primary-orange2: hsl(25, 97%, 43%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-light-grey: hsl(217, 12%, 63%);
     --clr-medium-grey: hsl(216, 12%, 54%);
@@ -69,6 +70,10 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+h1 {
+    line-height: 1;
+}
+
 /*
   9. Create a root stacking context
 */
@@ -97,7 +102,7 @@ body {
 }
 
 /* Card */
-.card {
+.card__content {
     margin: var(--content-margin);
     padding: var(--content-margin);
     background-color: var(--clr-dark-blue);
@@ -126,11 +131,6 @@ body {
     color: var(--clr-light-grey);
 }
 
-@media (max-width: 375px) {
-    .card__text {
-        font-size: 0.75rem;
-    }
-}
 
 .card__score {
     display: flex;
@@ -165,9 +165,45 @@ body {
 
 
 /* Thank You */
-.submit-card {
+.submit__content {
     margin: var(--content-margin);
-    padding: var(--content-margin);
+    padding: 2.125rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: 2rem;
+    gap: 1.5rem;
+    max-width: var(--card-width);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.submit__score {
+    display: grid;
+    color: var(--clr-primary-orange2);
+    background-color: var(--clr-dark-blue2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2rem;
+}
+
+.submit__header {
+    color: var(--clr-white);
+    margin: 0;
 
 }
 
+
+@media (max-width: 376px) {
+    .card__text {
+        font-size: 0.8125rem;
+    }
+
+    .submit__score {
+        font-size: 0.8125rem;
+        font-weight: var(--fw-bold);
+    }
+
+    .submit__text {
+        color: var(--clr-light-grey);
+        font-size: 0.8125rem;
+    }
+}
