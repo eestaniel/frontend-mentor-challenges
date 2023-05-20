@@ -2,7 +2,7 @@ const button = document.getElementsByClassName('button')[0]
 const card = document.getElementsByClassName('card')[0]
 const submit_card = document.getElementsByClassName('submit-card')[0]
 const scores = document.querySelectorAll('.score')
-
+let doc_score = document.getElementById('_score')
 let did_submit = false;
 let selected_score = 0;
 
@@ -20,5 +20,6 @@ button.addEventListener('click', () => {
     if (selected_score !== 0) {
         card.classList.toggle('hidden')
         submit_card.classList.toggle('hidden')
+        doc_score.innerText = selected_score
     }
 })
