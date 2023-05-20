@@ -104,9 +104,9 @@ body {
     gap: var(--card-spacing)
 }
 
-@media (min-width: 375px){
+@media (min-width: 375px) {
     .card {
-
+        padding-bottom: 2rem;
     }
 }
 
@@ -124,7 +124,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--clr-secondary-300);  /* set your overlay color */
+    background-color: var(--clr-secondary-300); /* set your overlay color */
     background-image: url("images/icon-view.svg");
     background-repeat: no-repeat;
     background-position: center;
