@@ -1,0 +1,173 @@
+
+:root {
+    --clr-primary-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-medium-grey: hsl(216, 12%, 54%);
+    --clr-dark-blue: hsl(213, 19%, 18%);
+    --clr-dark-blue2: hsl(213, 19%, 20%);
+    --clr-very-dark-blue: hsl(216, 12%, 8%);
+
+    --ff-base: "Overpass", sans-seriff;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+}
+
+
+/* Reset default values */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* My CSS */
+
+body {
+    --content-margin: 1.5rem 2rem;
+    --content-padding: 2rem 2rem;
+    --content-spacing: 1.25rem;
+    --card-width: 412px;
+
+    background-color: var(--clr-very-dark-blue);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 15px;
+    display: grid;
+    place-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Card */
+.card {
+    margin: var(--content-margin);
+    padding: var(--content-margin);
+    background-color: var(--clr-dark-blue);
+    border-radius: 2rem;
+    display: grid;
+    gap: var(--content-spacing);
+    max-width: var(--card-width);
+}
+
+
+.card__icon {
+    background-color: var(--clr-dark-blue2);
+    aspect-ratio: 1 / 1;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+}
+
+.card__header {
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+}
+
+.card__text {
+    color: var(--clr-light-grey);
+}
+
+@media (max-width: 375px) {
+    .card__text {
+        font-size: 0.75rem;
+    }
+}
+
+.card__score {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.score {
+    background-color: var(--clr-dark-blue2);
+    width: 42px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    color: var(--clr-light-grey);
+}
+
+.score:is(:hover, :focus) {
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-white);
+}
+
+.button {
+    border: none;
+    border-radius: 2rem;
+    padding: .75rem 1rem;
+    background-color: var(--clr-primary-orange);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+}
+
+
+/* Thank You */
+.submit-card {
+    margin: var(--content-margin);
+    padding: var(--content-margin);
+
+}
+
