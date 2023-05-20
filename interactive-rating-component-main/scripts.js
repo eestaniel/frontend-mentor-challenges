@@ -9,8 +9,12 @@ let selected_score = 0;
 // Add a click event listener to each score
 scores.forEach((score, index) => {
     score.addEventListener('click', () => {
+
         selected_score = index + 1; // Update the selected score value
-        console.log('Selected Score:', selected_score); // Log the selected score
+        // Reset style for all scores
+        scores.forEach(score => score.style.backgroundColor = '');
+        score.style.backgroundColor = 'var(--clr-light-grey)'
+        score.style.color = 'var(--clr-white)'
     });
 });
 
