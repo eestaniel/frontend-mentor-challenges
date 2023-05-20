@@ -184,11 +184,13 @@ body {
     border-radius: 100%;
     color: var(--clr-light-grey);
     cursor: pointer;
+
 }
 
 .score:is(:hover, :focus) {
     background-color: var(--clr-primary-orange);
     color: var(--clr-white);
+    transition: background-color 0.25s;
 }
 
 .button {
@@ -202,6 +204,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
+
 }
 
 @media (max-width: 376px) {
@@ -213,6 +216,7 @@ body {
 .button:hover {
     background-color: var(--clr-primary-orange3);
     color: var(--clr-primary-orange);
+    transition: background-color 0.25s;
 }
 
 
