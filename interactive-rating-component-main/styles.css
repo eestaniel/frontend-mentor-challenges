@@ -1,7 +1,7 @@
 
 :root {
     --clr-primary-orange: hsl(25, 97%, 53%);
-    --clr-primary-orange2: hsl(25, 97%, 43%);
+    --clr-primary-orange2: hsl(25, 77%, 53%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-light-grey: hsl(217, 12%, 63%);
     --clr-medium-grey: hsl(216, 12%, 54%);
@@ -147,6 +147,7 @@ body {
     place-content: center;
     border-radius: 100%;
     color: var(--clr-light-grey);
+    cursor: pointer;
 }
 
 .score:is(:hover, :focus) {
@@ -161,6 +162,15 @@ body {
     background-color: var(--clr-primary-orange);
     color: var(--clr-white);
     font-weight: var(--fw-bold);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.button:hover {
+    background-color: var(--clr-primary-orange3);
+    color: var(--clr-primary-orange);
 }
 
 
@@ -191,6 +201,10 @@ body {
 
 }
 
+.submit__text {
+    color: var(--clr-light-grey);
+}
+
 
 @media (max-width: 376px) {
     .card__text {
@@ -199,11 +213,9 @@ body {
 
     .submit__score {
         font-size: 0.8125rem;
-        font-weight: var(--fw-bold);
     }
 
     .submit__text {
-        color: var(--clr-light-grey);
-        font-size: 0.8125rem;
+        font-size: 0.825rem;
     }
 }
