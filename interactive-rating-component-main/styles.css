@@ -114,7 +114,7 @@ body {
 }
 
 @media (max-width: 376px) {
-    .card__content{
+    .card__content {
         margin: 1.5rem 1.5rem;
         padding: 1.5rem 2rem;
         gap: 1.125rem;
@@ -134,7 +134,7 @@ body {
 }
 
 @media (max-width: 376px) {
-    .card__icon{
+    .card__icon {
         height: 40px;
     }
 
@@ -149,7 +149,7 @@ body {
 }
 
 @media (max-width: 376px) {
-    .card__header{
+    .card__header {
         font-size: 0.85rem;
     }
 
@@ -160,7 +160,7 @@ body {
 }
 
 @media (max-width: 376px) {
-    .card__text{
+    .card__text {
         line-height: 1.6;
         font-size: .8125rem;
     }
@@ -230,7 +230,7 @@ body {
 }
 
 @media (max-width: 376px) {
-    .submit__content{
+    .submit__content {
         margin: 1.5rem 1.5rem;
         padding: 1.5rem 2rem;
         gap: 1.125rem;
@@ -249,7 +249,7 @@ body {
 
 .submit__header {
     color: var(--clr-white);
-    margin: 1rem 0 0 0 ;
+    margin: 1rem 0 0 0;
     font-weight: var(--fw-bold);
     font-size: 1.125rem;
 
