@@ -1,10 +1,15 @@
 :root {
+    --clr-primary-300: hsl(33 54% 64%);
     --clr-primary-400: hsl(31, 77%, 52%);
     --clr-secondary-400: hsl(184, 100%, 22%);
+    --clr-secondary-500: hsl(183 19% 37%);
     --clr-tertiary-400: hsl(179, 100%, 13%);
+    --clr-tertiary-500: hsl(167 24% 28%);
+
 
     --clr-neutral-200: hsla(0, 0%, 100%, 0.75);
     --clr-neutral-400: hsl(0, 0%, 95%);
+    --clr-neutral-600: hsl(32 98% 79%);
 
     --ff-base: 'Lexend Deca', sans-serif;
     --ff-accent: 'Big Shoulders Display', cursive;
@@ -81,9 +86,149 @@ h1 {
 
 /* My CSS */
 
+html, body {
+    height: 100%;
+
+}
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    height: 100vh;
+    background-color: var(--clr-neutral-400);
+    font-size: 15px;
+    place-items: center;
+    display: grid;
+}
+
+.component {
+    margin: 1.5rem;
+    max-width: 326px;
+}
+
+.component__grid-container {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    color: var(--clr-neutral-400);
+    margin-top: 1.5rem;
+}
+
+.container__object {
+    max-width: 326px;
+    font-family: var(--ff-accent);
+    padding-inline: 3rem;
+    padding-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.object__header {
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    margin-top: 1.375rem;
+
+}
+
+.object__paragraph {
+    margin-top: 1rem;
+    font-family: var(--ff-base);
+    color: var(--clr-neutral-600);
+    letter-spacing: 0px;
+}
+
+.object__button {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-bold);
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2rem;
+    letter-spacing: 0px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.object__button:hover {
+    cursor: pointer;
+    border: 3px solid white;
+    color: white;
+}
+
+/* Sedan */
+.sedan {
+    background-color: var(--clr-primary-400);
+
+}
+
+.object__icon[data-type='sedan'] {
+    content: "";
+    width: 64px;
+    height: 40px;
+    background-image: url("images/icon-sedans.svg");
+}
+
+.sedan button {
+    color: var(--clr-primary-300);
+}
+
+.sedan button:hover {
+    background-color: var(--clr-primary-400);
+}
 
 
+/* SUV */
+.suv {
+    background-color: var(--clr-secondary-400);
+}
 
+
+.suv .object__paragraph {
+    color: var(--clr-neutral-200);
+}
+
+.object__icon[data-type='suv'] {
+    content: "";
+    width: 64px;
+    height: 40px;
+    background-image: url("images/icon-suvs.svg");
+}
+
+.suv .object__button {
+    color: var(--clr-secondary-400);
+}
+
+.suv button:hover {
+    background-color: var(--clr-secondary-400);
+    color: white;
+}
+
+/* Luxury */
+.luxury {
+    background-color: var(--clr-tertiary-400);
+}
+
+
+.object__icon[data-type='luxury'] {
+    content: "";
+    width: 64px;
+    height: 40px;
+    background-image: url("images/icon-luxury.svg");
+}
+
+.luxury .object__paragraph {
+    color: var(--clr-neutral-200);
+}
+
+.luxury button:hover {
+    background-color: var(--clr-tertiary-400);
+    color: white;
+}
+
+
+@media (min-width: 480px) {
+
+}
 
 
 .attribution {
