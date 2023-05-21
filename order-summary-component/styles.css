@@ -124,6 +124,7 @@ body {
     color: var(--clr-neutral-300);
     font-size: 1rem;
     text-align: center;
+    margin-inline: 1rem;
 }
 
 
