@@ -2,7 +2,7 @@
 
     --clr-primary-300: hsl(229 87% 96%);
     --clr-primary-400: hsl(225, 100%, 94%);
-    --clr-secondary-300: hsl(246, 63% ,67%);
+    --clr-secondary-300: hsl(246, 63%, 67%);
     --clr-secondary-400: hsl(245, 75%, 52%);
 
 
@@ -199,7 +199,7 @@ body {
 .button:hover {
     cursor: pointer;
     background-color: var(--clr-secondary-300);
-    
+
 }
 
 .cancel-order {
@@ -227,6 +227,7 @@ body {
         background-image: url("images/pattern-background-desktop.svg");
 
     }
+
     .card__body {
         padding: 2.75rem 3rem;
         gap: 1rem;
