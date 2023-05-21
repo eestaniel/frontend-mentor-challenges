@@ -104,9 +104,20 @@ body {
     overflow: hidden;
     border-radius: 0.5rem;
     max-width: 375px;
-
+}
+.img-wrapper {
+    position: relative;
 }
 
+.img-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(120, 15, 174, 0.5);
+}
 .card__content {
     order: 2;
     display: grid;
@@ -130,10 +141,11 @@ body {
     color: var(--clr-secondary-400)
 }
 
-.card__image {
+.card__image img{
     order: 1;
-    overflow: hidden;
 }
+
+
 
 .grid-box {
     display: grid;
@@ -158,8 +170,6 @@ body {
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 1px;
-
 }
-
 
 
