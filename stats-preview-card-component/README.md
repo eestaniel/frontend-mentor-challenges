@@ -11,7 +11,7 @@ Users should be able to:
 
 ### Live Site
 
-Solution URL: https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62/hub
+Solution URL: https://www.frontendmentor.io/solutions/stats-preview-card-component-htmlcss-kjXVDTmaSB
 
 Live Site URL: https://stats-preview-card-component-ee.netlify.app/
 
