@@ -86,6 +86,9 @@ body {
     font-weight: var(--fw-regular);
     font-size: var(--fs-regular);
     background-color: var(--clr-primary-400);
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     color: var(--clr-neutral-200);
     height: 100vh;
     display: grid;
@@ -102,6 +105,7 @@ body {
     display: grid;
     place-items: center;
     margin: 4rem 1.5rem;
+    box-shadow: 0 5px 20px 5px hsl(225deg 74% 87%);
 }
 
 .card__body {
@@ -219,6 +223,10 @@ body {
 
 @media (min-width: 25em) {
 
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+
+    }
     .card__body {
         padding: 2.75rem 3rem;
         gap: 1rem;
