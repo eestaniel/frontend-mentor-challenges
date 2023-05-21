@@ -134,8 +134,10 @@ body {
 }
 
 .card__header {
+    font-family: var(--ff-base);
     color: var(--clr-neutral-100);
     font-size: 1.75rem;
+    font-weight: var(--fw-base-bold);
 }
 
 .card__paragraph {
@@ -193,7 +195,6 @@ body {
 
     .card__header {
         font-size: 2.25rem;
-        font-family: var(--ff-base);
     }
 
     .grid-box {
