@@ -7,12 +7,19 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
     --clr-neutral-400: hsla(0, 0%, 100%, 0.6);
+    --clr-neutral-700: hsl(246 10% 54%);
 
 
-    --ffbase: 'Inter', sans-serif;
+    --ff-base: 'Inter', sans-serif;
     --ff-accent: 'Lexend Deca', sans-serif;
+
+    --fw-base-regular: 400;
+    --fw-base-bold: 700;
+    --fw-accent-regular: 400;
+
     --fs-normal: 15px;
 }
+
 /* Reset CSS*/
 /* Box sizing rules */
 *,
@@ -50,7 +57,7 @@ html:focus-within {
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 
@@ -75,3 +82,84 @@ select {
 }
 
 /* CSS */
+
+body {
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-regular);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-primary-900);
+    font-size: 15px;
+
+}
+
+.card {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    margin: 3rem 1.5rem;
+    background-color: var(--clr-primary-400 /**/);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    max-width: 375px;
+
+}
+
+.card__content {
+    order: 2;
+    display: grid;
+    margin: 3rem;
+    font-weight: var(--fw-base-regular);
+    gap: 1.5rem
+}
+
+.card__header {
+    color: var(--clr-neutral-100);
+    font-size: 1.75rem;
+}
+
+.card__paragraph {
+    color: var(--clr-neutral-400);
+    line-height: 1.8;
+    font-family: var(--ff-base);
+}
+
+.header-highlight {
+    color: var(--clr-secondary-400)
+}
+
+.card__image {
+    order: 1;
+    overflow: hidden;
+}
+
+.grid-box {
+    display: grid;
+    color: var(--clr-neutral-300);
+    gap: 2rem;
+}
+
+.box {
+    display: grid;
+    gap: .5rem;
+}
+
+.box h2 {
+    font-size: 1.375rem;
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-base-bold);
+}
+
+.box p {
+    font-weight: var(--fw-base-regular);
+    color: var(--clr-neutral-700);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+}
+
+
+
