@@ -119,11 +119,13 @@ body {
     max-width: 325px;
     text-align: center;
     box-shadow: 3px 30px 100px hsla(229, 23%, 23%, 0.3);
+    position: relative;
 }
+
 
 .container__user-image {
     position: absolute;
-    top: 39.5%;
+    top: 21.5%;
 }
 
 .container__user-image img {
@@ -133,7 +135,7 @@ body {
 
 
 .container__header {
-    margin-top: 4.75rem;
+    margin-top: 5rem;
     font-size: 1.25rem;
     color: hsl(229, 23%, 23%);
 }
@@ -143,11 +145,10 @@ body {
 }
 
 .container__location {
-    margin-top: 1rem;
+    margin-top: .6875rem;
     margin-bottom: 1.25rem;
     font-size: 0.875rem;
     color: hsl(0, 0%, 59%);
-    font-weight: var(--fw-bold);
 }
 
 hr {
@@ -162,6 +163,7 @@ hr {
     gap: 1.8125rem;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    line-height: 1.5;
 
 }
 
@@ -179,7 +181,7 @@ hr {
 
 @media (min-width: 450px) {
     .container {
-        max-width: 349px;
+        max-width: 348px;
     }
 }
 
