@@ -39,14 +39,11 @@ const Accordion = () => {
     return (
         <div>
             <div className="bg__desktop__box"></div>
+            <div className="bg__mobile__computer"></div>
+            <div className="bg__mobile__shadow"></div>
             <div className="accordion">
-
                 <div className="bg">
-                    <div className="bg__mobile__computer"></div>
-                    <div className="bg__mobile__shadow"></div>
-                    <div className="bg__mobile__computer"></div>
                     <div className="bg__desktop__computer"></div>
-
                     <div className="bg__desktop__shadow"></div>
                 </div>
 
