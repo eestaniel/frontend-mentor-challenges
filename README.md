@@ -7,8 +7,9 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 2. [Interactive Rating Component](interactive-rating-component/README.md)
 3. [NFT Preview Card Component](nft-preview-card-component/README.md)
 4. [Order Summary Component](order-summary-component/README.md)
-5. [QR Code Component](qr-code-component/README.md)
-6. [Stats Preview Card Component](stats-preview-card-component/README.md)
+5. [Profile Card Component](profile-card-component/README.md)
+6. [QR Code Component](qr-code-component/README.md)
+7. [Stats Preview Card Component](stats-preview-card-component/README.md)
 
 
 
