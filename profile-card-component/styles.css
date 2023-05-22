@@ -159,6 +159,7 @@ hr {
 .container__grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.8125rem;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 
@@ -176,9 +177,9 @@ hr {
 }
 
 
-@media (min-width: 600px) {
-    body {
-        background-position: -35em -40em, 7em 12em;
+@media (min-width: 450px) {
+    .container {
+        max-width: 349px;
     }
 }
 
