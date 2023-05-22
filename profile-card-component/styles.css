@@ -1,3 +1,10 @@
+:root {
+    --ff-base: 'Kumbh Sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+}
+
 /* Reset default values */
 /*
   1. Use a more-intuitive box-sizing model.
@@ -62,3 +69,137 @@ h1 {
 #root, #__next {
     isolation: isolate;
 }
+
+
+/* CSS */
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    background-color: hsl(186deg 74% 39%);
+}
+
+
+.bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg-top{
+    background: url(images/bg-pattern-top.svg) no-repeat bottom right;
+    top: -40%;
+    left: -50%;
+    z-index: -1;
+}
+
+
+.bg-bottom {
+    background: url(images/bg-pattern-bottom.svg) no-repeat top left;
+    bottom: -40%;
+    right: -50%;
+    z-index: -1;
+
+}
+
+
+
+.container {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 325px;
+    text-align: center;
+    box-shadow: 3px 30px 100px hsla(229, 23%, 23%, 0.3);
+}
+
+.container__user-image {
+    position: absolute;
+    top: 39.5%;
+}
+
+.container__user-image img {
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+
+.container__header {
+    margin-top: 4.75rem;
+    font-size: 1.25rem;
+    color: hsl(229, 23%, 23%);
+}
+
+.container__age {
+    color: hsl(0, 0%, 59%);
+}
+
+.container__location {
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 59%);
+    font-weight: var(--fw-bold);
+}
+
+hr {
+    width: 100%;
+    border-color: rgb(238 238 238);
+    border-style: solid;
+}
+
+.container__grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+}
+
+.container__grid-item h2 {
+    font-size: 1.125rem;
+
+}
+
+.container__grid-item p {
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 59%);
+
+}
+
+
+@media (min-width: 600px) {
+    body {
+        background-position: -35em -40em, 7em 12em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
