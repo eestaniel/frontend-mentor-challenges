@@ -92,7 +92,7 @@ body {
     width: 100vw;
 }
 
-.bg-top{
+.bg-top {
     background: url(images/bg-pattern-top.svg) no-repeat bottom right;
     top: -40%;
     left: -50%;
@@ -107,7 +107,6 @@ body {
     z-index: -1;
 
 }
-
 
 
 .container {
@@ -186,10 +185,15 @@ hr {
 }
 
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3rem;
+}
 
-
-
-
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 
 
