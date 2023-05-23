@@ -12,4 +12,4 @@ Users should be able to:
 
 Solution URL: 
 
-Live Site Url: social-proof-section-ee.netlify.app
+Live Site Url: https://social-proof-section-ee.netlify.app/
