@@ -10,6 +10,6 @@ Users should be able to:
 
 ### Live Site
 
-Solution URL: 
+Solution URL: https://www.frontendmentor.io/solutions/social-proof-section-htmlcss-6U5RimTVPj
 
 Live Site Url: https://social-proof-section-ee.netlify.app/
