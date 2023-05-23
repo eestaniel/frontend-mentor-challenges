@@ -63,7 +63,7 @@ const Accordion = () => {
                                     className={`accordion__flex_group__icon ${selectedQuestionIndex === item.index ? 'icon-flip' : ''}`}
                                     datatype={'icon'}></div>
                             </div>
-                            {selectedQuestionIndex === item.index && <div className={'answer'}>{item.answer}</div>}
+                            {selectedQuestionIndex === item.index && <p className={'answer'}>{item.answer}</p>}
                             <hr/>
 
                         </div>
