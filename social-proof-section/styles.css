@@ -101,7 +101,6 @@ body {
     max-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: deepskyblue;
     overflow: hidden;
 }
 
@@ -236,6 +235,22 @@ body {
         height: 100%;
         overflow: hidden;
     }
+
+    .bg__top {
+        position: absolute;
+        background-image: url("images/bg-pattern-top-desktop.svg");
+        width: 584px;
+        height: 362px;
+    }
+
+    .bg__bot {
+        position: absolute;
+        background-image: url("images/bg-pattern-bottom-desktop.svg");
+        width: 1085px;
+        height: 673px;
+        transform: translate(21rem, 9rem);
+    }
+
     .social__container {
         height: 100%;
         width: 100%;
@@ -244,6 +259,7 @@ body {
         grid-template-rows: auto;
         gap: 10px;
         max-width: 1440px;
+        max-height: 800px;
         padding: 7.25rem 10.3125rem;
         margin-bottom: 1rem;
     }
@@ -258,6 +274,7 @@ body {
         padding-right: 3rem;
         letter-spacing: -2px;
     }
+
     .social__paragraph {
         font-size: 1.1875rem;
         word-spacing: 2px;
