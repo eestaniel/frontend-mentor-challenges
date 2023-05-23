@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+
+    --clr-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --clr-soft-red: hsl(14, 88%, 65%);
+
+    --clr-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --clr-dark-grayish-blue: hsl(240, 6%, 50%);
+
+    --clr-light-grayish-blue: hsl(240, 5%, 91%);
+    --ff-base: 'Kumbh Sans', sans-serif;
+    --fw-base: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-base);
+    font-size: 12px;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(hsl(273deg 76% 66%), hsl(250deg 74% 65%));
+    overflow: hidden;
+
+}
+
+.accordion {
+    max-width: 326px;
+    background-color: white;
+    border-radius: 1.25rem;
+}
+
+.accordion__header {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    color: hsl(240deg 36% 16%);
+    margin-bottom: .875rem;
+}
+
+
+.accordion__body {
+    display: grid;
+    padding-inline: 1.5rem;
+    padding-top: 8.375rem;
+    padding-bottom: 3em;
+    color: var(--clr-dark-grayish-blue);
+    font-size: .8125rem;
+}
+
+
+.selected-question {
+    font-size: .8125rem;
+    font-weight: var(--fw-bold);
+}
+
+.selected-question p {
+
+    color: hsl(245deg 29% 9%);
+}
+
+.icon-flip {
+    transform: rotate(180deg);
+}
+
+.accordion__flex_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    gap: 2rem;
+}
+
+.accordion__body .answer {
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    font-size: .75rem;
+}
+
+.accordion__flex_group:hover {
+    cursor: pointer;
+    color: var(--clr-soft-red);
+}
+
+.accordion__flex_group__icon[datatype='icon'] {
+    content: "";
+    width: 10px;
+    height: 7px;
+    background-image: url("images/icon-arrow-down.svg");
+}
+
+hr {
+    border: 1px solid var(--clr-light-grayish-blue);
+}
+
+.bg {
+    position: relative;
+}
+
+
+.bg__desktop__computer,
+.bg__desktop__box,
+.bg__desktop__shadow {
+    display: none;
+}
+
+.bg__mobile {
+    display: block;
+}
+
+.bg__mobile__computer {
+    background: url("images/illustration-woman-online-mobile.svg") no-repeat;
+    aspect-ratio: 1 / 1;
+    height: 20em;
+    position: absolute;
+    transform: translate(2.5rem, -0.375rem);
+}
+
+
+.bg__mobile__shadow {
+    width: 240px;
+    height: 104px;
+    background: url("images/bg-pattern-mobile.svg") no-repeat;
+    transform: translate(2.5rem, 6.5rem);
+}
+
+
+@media (min-width: 500px) {
+
+
+    .accordion {
+        max-width: 919px;
+        max-height: 519px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .accordion__body {
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-bottom: 5rem;
+    }
+
+    .accordion__header {
+        text-align: start;
+    }
+
+    .accordion__flex_group {
+        padding-right: 5.25rem;
+    }
+
+
+    .accordion__flex_group .question {
+        padding-right: 2.5rem;
+    }
+
+    .answer {
+        margin-right: 5rem;
+        padding: 0;
+    }
+
+    .accordion__flex_group .question:hover {
+        color: var(--clr-soft-red);
+    }
+
+    .bg__mobile__computer,
+    .bg__mobile__shadow {
+        display: none;
+    }
+
+    .bg__desktop__computer,
+    .bg__desktop__box,
+    .bg__desktop__shadow {
+        display: block;
+    }
+
+    .bg__desktop__computer {
+        background-image: url("images/illustration-woman-online-desktop.svg");
+        height: 359px;
+        width: 472px;
+        position: relative;
+        background-repeat: no-repeat;
+        transform: translate(-7.0625em, 7em);
+        z-index: 2;
+    }
+
+    .bg__desktop__box {
+        background-image: url("images/illustration-box-desktop.svg");
+        width: 191px;
+        height: 184px;
+        position: absolute;
+        background-repeat: no-repeat;
+        transform: translate(-7.875em, 13.5rem);
+        z-index: 3;
+    }
+
+    .bg__desktop__shadow {
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        width: 966px;
+        height: 945px;
+        position: absolute;
+        z-index: 1;
+        transform: translate(-48em, -53em);
+
+
+    }
+
+    hr {
+        width: 21.5rem
+    }
+
+
+}
+
