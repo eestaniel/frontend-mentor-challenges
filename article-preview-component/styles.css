@@ -105,11 +105,12 @@ body {
     background-color: white;
     border-radius: .75rem;
     overflow: hidden;
+    grid-template-columns: 1fr;
 }
 
 .article__image {
     background-image: url("images/drawers.jpg");
-    height:12.5rem;
+    height: 12.5rem;
     background-size: cover;
 }
 
@@ -155,8 +156,9 @@ body {
     justify-self: start;
 }
 
-.article__author h2 {
+.article__author {
     font-weight: var(--fw-bold);
+    color: hsl(212, 8%, 35%);
 }
 
 .article__date {
@@ -178,7 +180,38 @@ body {
 }
 
 
+@media (min-width: 500px) {
+    .article-component {
+        max-height: 17.5rem;
+        max-width: 45.625rem;
+        display: grid;
+        text-align: left;
+        grid-template-columns: 1fr 1.56fr;
+        box-shadow: 5px 10px 20px var(--clr-neutral-900);
+    }
 
+    .article__body {
+        padding-right: 2rem;
+        gap: 0;
+    }
+
+    .article__image {
+        background-image: url("images/drawers.jpg");
+        height: 17.5rem;
+        max-width: 18.75rem;
+        background-size: cover;
+    }
+
+    .article__header {
+        font-size: 1.25rem;
+        line-height: 1.315;
+    }
+
+    .article__flex_group {
+        margin-top: 0;
+        gap: 0;
+    }
+}
 
 
 
