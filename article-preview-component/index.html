@@ -11,13 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Frontend Mentor | Article preview component</title>
-
+    <script src="scripts.js" defer></script>
 </head>
 <body>
 
 <main>
     <div class="article-component">
-        <img src="images/drawers.jpg" alt="image-drawers" class="article__image">
+        <div class="article__image"></div>
         <div class="article__body">
             <h1 class="article__header">Shift the overall look and feel by adding these wonderful
                 touches to furniture in your home</h1>
@@ -27,13 +27,26 @@
             <div class="article__flex_group">
                 <img src="images/avatar-michelle.jpg" alt="article-avatar-michelle" class="article__avatar">
                 <h2 class="article__author">Michelle Appleton <span class="article__date">28 Jun 2020</span></h2>
-                <button class="button">Share</button>
+                <div class="article__share-circle">
+                    <svg class="article__share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                        <path class="article__share-icon-color" fill="#6E8098"
+                              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
+    <div class="share__flex_group hidden">
+        <p class="share-icon">share</p>
+        <img src="images/icon-facebook.svg" alt="facebook-icon" class="share-icon">
+        <img src="images/icon-twitter.svg" alt="twitter-icon" class="share-icon">
+        <img src="images/icon-pinterest.svg" alt="pinterest-icon" class="share-icon">
+    </div>
+    <div class="square hidden"></div>
+
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Edwin Estaniel</a>.
     </div>
 </main>
 
