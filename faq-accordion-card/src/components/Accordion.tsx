@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Question from './Questions';
 import Background from './Background';
 
