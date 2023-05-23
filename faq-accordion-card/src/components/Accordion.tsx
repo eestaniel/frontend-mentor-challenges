@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import Question from './Questions';
+import Background from './Background';
 
 const Accordion = () => {
-
     const [selectedQuestionIndex, setSelectedQuestionIndex] = useState<number | null>(null);
 
     const questionsAndAnswers = [
@@ -38,38 +39,29 @@ const Accordion = () => {
 
     return (
         <div>
-            <div className="bg__desktop__box"></div>
-            <div className="bg__mobile__computer"></div>
-            <div className="bg__mobile__shadow"></div>
+            <Background bgClass="bg__desktop__box" />
+            <Background bgClass="bg__mobile__computer" />
+            <Background bgClass="bg__mobile__shadow" />
             <div className="accordion">
-                <div className="bg">
-                    <div className="bg__desktop__computer"></div>
-                    <div className="bg__desktop__shadow"></div>
-                </div>
-
+                <Background bgClass="bg">
+                    <Background bgClass="bg__desktop__computer" />
+                    <Background bgClass="bg__desktop__shadow" />
+                </Background>
 
                 <div className="accordion__body">
                     <div className="accordion__header">
                         <h1>FAQ</h1>
-                    </div >
+                    </div>
                     <div className="accordion__questions">
-                    {questionsAndAnswers.map((item) => (
-                        <div key={item.index}>
-                            <div
-                                className={`accordion__flex_group ${selectedQuestionIndex === item.index ? 'selected-question' : ''}`}
-                                onClick={() => toggleQuestion(item.index)}>
-                                <p className= 'question'>{item.question}</p>
-                                <div
-                                    className={`accordion__flex_group__icon ${selectedQuestionIndex === item.index ? 'icon-flip' : ''}`}
-                                    datatype={'icon'}></div>
-                            </div>
-                            {selectedQuestionIndex === item.index && <p className={'answer'}>{item.answer}</p>}
-                            <hr/>
-
-                        </div>
-
-                    ))}
-                </div>
+                        {questionsAndAnswers.map((item) => (
+                            <Question
+                                key={item.index}
+                                item={item}
+                                selectedQuestionIndex={selectedQuestionIndex}
+                                toggleQuestion={toggleQuestion}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
