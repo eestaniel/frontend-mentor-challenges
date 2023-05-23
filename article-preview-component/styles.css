@@ -204,6 +204,10 @@ body {
         line-height: 1.315;
     }
 
+    .article__paragraph {
+        font-size: 0.8125rem;
+    }
+
     .article__flex_group {
         position: relative;
         margin-top: 0;
