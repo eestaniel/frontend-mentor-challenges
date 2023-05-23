@@ -98,10 +98,11 @@ body {
     font-family: var(--ff-base);
     font-weight: var(--fw-regular);
     font-size: var(--fs-regular);
-    height: 100vh;
+    max-height: 100vh;
     display: grid;
     place-items: center;
     background-color: deepskyblue;
+    overflow: hidden;
 }
 
 .bg__top {
@@ -229,8 +230,49 @@ body {
 }
 
 
+@media (min-width: 768px) {
 
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+    .social__container {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        max-width: 1440px;
+        padding: 7.3125rem 10.3125rem;
+    }
 
+    .social__group-1 {
+        text-align: start;
+        padding-right: 3rem;
+    }
+
+    .social__header {
+        font-size: 3.5rem;
+        padding-right: 3rem;
+    }
+    .social__paragraph {
+        font-size: 1.1875rem;
+        word-spacing: 1px;
+    }
+
+    .social__group-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+
+    }
+
+    .social__group-3:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+}
 
 
 
