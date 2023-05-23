@@ -10,10 +10,8 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 5. [Order Summary Component](order-summary-component/README.md)
 6. [Profile Card Component](profile-card-component/README.md)
 7. [QR Code Component](qr-code-component/README.md)
-8. [Stats Preview Card Component](stats-preview-card-component/README.md)
-
-
-
+8. [Social Proof Section](social-proof-section/README.md)
+9. [Stats Preview Card Component](stats-preview-card-component/README.md)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
