@@ -213,7 +213,7 @@ body {
 }
 
 
-@media (min-width: 530px) {
+@media (min-width: 1100px) {
     body {
         height: 100vh;
     }
