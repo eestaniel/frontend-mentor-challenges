@@ -1,4 +1,3 @@
-
 /* Reset default values */
 /*
   1. Use a more-intuitive box-sizing model.
@@ -64,22 +63,165 @@ h1 {
     isolation: isolate;
 }
 
+
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    height: 100vh;
     background-image: url("images/bg-intro-mobile.png");
     background-repeat: no-repeat;
+    background-color: hsl(1deg 100% 73%);
+    height: 100vh;
     display: grid;
     place-items: center;
 }
 
-
 .container {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.header {
+    text-align: center;
+    color: hsl(13deg 88% 99%);
+}
+
+.header__header {
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+.header__paragraph {
+    line-height: 1.6;
+    color: hsl(1deg 100% 95%);
+    font-weight: 500;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 326px;
+    margin-top: 3rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: hsl(360deg 60% 63%);
+    border-radius: 0 0 1rem 1rem;
+    height: 10px;
+}
+
+.form__try-free {
+    background-color: hsl(248deg 32% 48%);
+    color: hsl(248deg 37% 81%);
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 0.75rem;
 
 }
 
+.free-7 {
+    font-weight: 700;
+    color: hsl(240deg 100% 100%);
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.form__item-group {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0deg 0% 100%);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.form__item-input {
+    width: 100%;
+    max-width: 276px;
+    position: relative;
+}
+
+.form__item {
+    padding: 0.875rem 0 0.875rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid hsl(0deg 0% 90%);
+    font-weight: 600;
+    font-size: .875rem;
+    position: relative;
+}
+
+.form__error-text {
+    font-size: 0.75rem;
+    font-style: italic;
+    position: relative;
+    bottom: 0;
+    left: 5rem;
+    color: red;
+}
+.form__error-icon {
+    background-image: url("images/icon-error.svg");
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 20%;
+    left: 15rem;
+}
+.button {
+    border-radius: .25rem;
+    background-color: hsl(153deg 59% 51%);
+    border: none;
+    padding: 1rem;
+    color: hsl(161deg 90% 90%);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 5px;
+    width: 100%;
+    background-color: hsl(154deg 58% 46%);
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.form__tos {
+    font-size: 0.635rem;
+    text-align: center;
+    padding-inline: 1rem;
+    color: hsl(254deg 11% 81%);
+}
+
+.tos__red {
+    color: hsl(359deg 51% 74%);
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
