@@ -72,13 +72,13 @@ body {
     background-image: url("images/bg-intro-mobile.png");
     background-repeat: no-repeat;
     background-color: hsl(1deg 100% 73%);
+    background-size: cover;
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
 .container {
-    max-width: 375px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -171,8 +171,9 @@ body {
     font-style: italic;
     position: relative;
     bottom: 0;
-    left: 5rem;
+    left: 0;
     color: red;
+    text-align: right;
 }
 .form__error-icon {
     background-image: url("images/icon-error.svg");
@@ -188,6 +189,8 @@ body {
     border: none;
     padding: 1rem;
     color: hsl(161deg 90% 90%);
+    position: relative;
+    overflow: hidden;
 }
 
 .button::before {
@@ -198,10 +201,12 @@ body {
     height: 5px;
     width: 100%;
     background-color: hsl(154deg 58% 46%);
+    border-radius: 0 0 2rem 2rem;
 }
 
 .button:hover{
     cursor: pointer;
+    background-color: hsl(154deg 64% 68%);
 }
 
 .form__tos {
@@ -224,4 +229,70 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url("images/bg-intro-desktop.png");
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header {
+        margin-left: 40%;
+        width: 100%;
+        max-width: 500px;
+        margin-right: 6rem;
+    }
+
+    .header__header {
+        font-size: 3rem;
+        text-align: left;
+
+    }
+
+    .header__paragraph {
+        text-align: left;
+
+    }
+
+    .header {
+        flex: 1 0 40%;  /* take up 40% of the container width */
+    }
+
+    .form-container {
+        flex: 1 0 50%;  /* take up 50% of the container width */
+        max-width: 540px;
+        max-height: 474px;
+        margin-right: 30rem;
+    }
+
+    .form__item-input {
+        max-height: 54px;
+        max-width: 458px;
+        width: 100%;
+    }
+
+    .form__item-group {
+        padding: 2.5rem;
+    }
+
+    .form__item {
+        width: 100%;
+    }
+
+    .form__try-free {
+        max-width: 538px;
+        max-height: 58px;
+    }
+
+    .form__error-icon {
+        left: 25rem;
+        top: 25%
+    }
 }
