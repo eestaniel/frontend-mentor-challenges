@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function(){
                     errorIcon.classList.add("form__error-icon");
                     parent.appendChild(errorIcon);
                 }
+
+                // Apply the 'input-invalid' class.
+                input.classList.remove('input-valid');
+                input.classList.add('input-invalid');
             } else {
                 // remove error text and icon if they exist
                 const errorText = parent.querySelector(".form__error-text");
@@ -47,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 if(errorIcon){
                     parent.removeChild(errorIcon);
                 }
+
+                // Apply the 'input-valid' class.
+                input.classList.remove('input-invalid');
+                input.classList.add('input-valid');
             }
         }
     });

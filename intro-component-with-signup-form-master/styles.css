@@ -221,6 +221,14 @@ body {
     font-weight: 700;
 }
 
+.input-valid {
+    border: 2px solid limegreen;
+}
+
+.input-invalid {
+    border: 2px solid hsl(1deg 42% 69%);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
