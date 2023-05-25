@@ -5,7 +5,7 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 ## Challenges
 1. [3-Column Preview Card Component](3-column-preview-card-component/README.md)
 2. [Article-Preview-Component](article-preview-component/README.md)
-2. [Base-Apparel-Coming-Soon](base-apparel-coming-soon)/README.md)
+2. [Base-Apparel-Coming-Soon](base-apparel-coming-soon/README.md)
 3. [Faq-Accordion-Card](faq-accordion-card/README.md)
 4. [Four-Card-Feature-Section](four-card-feature-section/README.md)
 5. [Interactive Rating Component](interactive-rating-component/README.md)
