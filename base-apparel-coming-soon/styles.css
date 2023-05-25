@@ -233,7 +233,7 @@ body {
         background-size: contain;
         text-align: left;
         place-items: flex-start;
-        grid-template-columns: 50% 1fr;
+        grid-template-columns: 1fr auto;
         grid-template-rows: auto auto 1fr;
         gap: 2rem 0;
         grid-template-areas:
