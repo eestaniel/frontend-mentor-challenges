@@ -162,6 +162,10 @@ body {
     color: hsl(0, 36%, 70%);
 }
 
+.email-border-error {
+    border: 2px solid hsl(0deg 64% 65%);
+}
+
 .form__button {
     position: absolute;
     display: grid;
