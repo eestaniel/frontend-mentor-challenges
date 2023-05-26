@@ -86,7 +86,8 @@ body {
     gap: 1rem;
     background-color: hsl(0deg 0% 100%);
     padding: var(--card-spacing);
-    border-radius: 0.25rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    box-shadow: 1px 5px 20px rgba(0,0,0, .2);
 }
 
 .group1__header {
@@ -115,6 +116,8 @@ body {
     padding: var(--card-spacing);
     line-height: 1.2;
     display: grid;
+    box-shadow: 1px 5px 20px rgba(0,0,0, .2);
+
 }
 
 .group2__header {
@@ -160,7 +163,9 @@ body {
     color: hsl(181deg 100% 96%);
     padding: var(--card-spacing);
     width: 100%;
-    border-radius: 0.25rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    box-shadow: 1px 5px 20px rgba(0,0,0, .2);
+
 }
 
 .group3__header {
