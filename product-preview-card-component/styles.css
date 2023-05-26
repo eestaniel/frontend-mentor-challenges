@@ -150,6 +150,18 @@ body {
     background-color: hsl(158deg 35% 37%);
     color: hsl(161deg 95% 96%);
     border-radius: 0.5rem;
+    position: relative;
+}
+.button__icon[datatype="icon"] {
+    content: "";
+    background-image: url("images/icon-cart.svg");
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 32%;
+    left: 23%;
+
 }
 
 .button:hover{
@@ -173,7 +185,7 @@ body {
     }
     .product-container {
         padding-top: 0.635rem;
-        padding-right: 3rem;
+        padding-right: 2rem;
     }
 
 
@@ -193,5 +205,15 @@ body {
 
     .button {
         margin-top: 1.25rem;
+        max-width: 235px;
+        width: 100%;=
     }
+
+    .button__icon[datatype="icon"] {
+        top: 32%;
+        left: 18%;
+
+    }
+
+
 }
