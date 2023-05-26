@@ -80,6 +80,7 @@ h1 {
 
 
 body {
+    display: grid;
     font-family: var(--ff-base);
     font-weight: 400;
     font-size: 1rem;
@@ -154,4 +155,43 @@ body {
 .button:hover{
     background-color: hsl(156deg 42% 18%);
     cursor: pointer;
+}
+
+@media (min-width: 555px) {
+    .container {
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        max-width: 600px;
+        max-height: 450px;
+        height: auto;
+    }
+    .container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .product-container {
+        padding-top: 0.635rem;
+        padding-right: 3rem;
+    }
+
+
+    .product__header {
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin-top: 1rem;
+    }
+    .product__paragraph {
+        margin-top: 1.5rem;
+        line-height: 1.65;
+    }
+
+    .product__price {
+        margin-top: 1.5rem;
+    }
+
+    .button {
+        margin-top: 1.25rem;
+    }
 }
