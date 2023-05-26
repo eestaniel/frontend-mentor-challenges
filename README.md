@@ -12,11 +12,12 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 7. [Intro Component with Signup Form](intro-component-with-signup-form-master/README.md)
 8. [NFT Preview Card Component](nft-preview-card-component/README.md)
 9. [Order Summary Component](order-summary-component/README.md)
-10. [Profile Card Component](profile-card-component/README.md)
-11. [QR Code Component](qr-code-component/README.md)
-11. [Single Price Grid Component](single-price-grid-component/README.md)
-12. [Social Proof Section](social-proof-section/README.md)
-13. [Stats Preview Card Component](stats-preview-card-component/README.md)
+10. [Product-Preview-Card-Component](product-preview-card-component/README.md)
+11. [Profile Card Component](profile-card-component/README.md)
+12. [QR Code Component](qr-code-component/README.md)
+13. [Single Price Grid Component](single-price-grid-component/README.md)
+14. [Social Proof Section](social-proof-section/README.md)
+15. [Stats Preview Card Component](stats-preview-card-component/README.md)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
