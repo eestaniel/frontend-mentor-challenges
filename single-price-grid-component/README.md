@@ -11,7 +11,7 @@ Users should be able to:
 
 ### Live Site
 
-Solution URL: 
+Solution URL: https://www.frontendmentor.io/solutions/single-price-grid-component-htmlcss-jN6-GdWyTX
 
 Live Site URL: https://single-price-grid-component-ee.netlify.app/
 
