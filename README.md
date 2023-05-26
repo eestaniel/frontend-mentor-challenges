@@ -14,6 +14,7 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 9. [Order Summary Component](order-summary-component/README.md)
 10. [Profile Card Component](profile-card-component/README.md)
 11. [QR Code Component](qr-code-component/README.md)
+11. [Single Price Grid Component](single-price-grid-component/README.md)
 12. [Social Proof Section](social-proof-section/README.md)
 13. [Stats Preview Card Component](stats-preview-card-component/README.md)
 

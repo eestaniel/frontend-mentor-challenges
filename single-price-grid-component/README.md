@@ -13,5 +13,5 @@ Users should be able to:
 
 Solution URL: 
 
-Live Site URL: 
+Live Site URL: https://single-price-grid-component-ee.netlify.app/
 
