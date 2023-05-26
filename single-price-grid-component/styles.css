@@ -193,7 +193,7 @@ body {
 
 @media (min-width: 576px) {
     body {
-        --card-spacing: 2rem 1.25rem 1.5rem 1.25rem;
+        --card-spacing: 2.5rem 2.25rem 2.25rem 2.25rem;
         --card_width-main: 635px;
         --card_width-secondary: 318px;
 
@@ -211,6 +211,19 @@ body {
         grid-area: group1;
     }
 
+    .group1__header {
+        font-size: 1.5rem;
+        letter-spacing: -0.25px;
+    }
+    .group1__mini-header {
+        letter-spacing: 1px;
+    }
+
+    .group1__paragraph {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
     .card__group2 {
         grid-area: group2;
         height: 100%;
@@ -226,8 +239,11 @@ body {
         max-width: var(--card_width-secondary);
         border-radius: 0 0 0.5rem 0;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+    }
 
-
+    .group3__header {
+        font-size: 1.25rem;
+        letter-spacing: -1px;
     }
     .attribution {
         grid-area: attribution;
