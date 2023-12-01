@@ -195,6 +195,14 @@ body {
             display: flex;
             flex-direction: row;
             position: absolute;
+            bottom: -5rem;
+            & a {
+                text-decoration: none;
+
+                &:hover {
+                    filter:brightness(200%);
+                }
+            }
         }
 
     }

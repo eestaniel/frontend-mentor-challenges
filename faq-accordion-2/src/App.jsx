@@ -23,27 +23,13 @@ export default function App() {
     },
   ]
 
-  const handleAccordion = (e) => {
-    const pElement = e.currentTarget.querySelector('p');
-    if (pElement) {
-      if (pElement.classList.contains('hidden')) {
-        pElement.classList.remove('hidden');
-        pElement.classList.add('visible');
-      } else {
-        pElement.classList.remove('visible');
-        pElement.classList.add('hidden');
-      }
-    }
-  }
-
-
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 512px)');
     const changeHandler = (e) => {
       const imgContainer = document.querySelector('.img-container img');
       imgContainer.src = e.matches
-        ? '/src/assets/images/background-pattern-mobile.svg'
-        : '/src/assets/images/background-pattern-desktop.svg';
+        ? '/assets/images/background-pattern-mobile.svg'
+        : '/assets/images/background-pattern-desktop.svg';
     };
 
     mediaQuery.addEventListener('change', changeHandler);
@@ -58,21 +44,21 @@ export default function App() {
   return (
     <>
       <header className="img-container">
-        <img src="/src/assets/images/background-pattern-mobile.svg" alt="bg_img"/>
+        <img src="/assets/images/background-pattern-mobile.svg" alt="bg_img"/>
       </header>
       <main className="main-container">
         <div className="accordion-wrapper">
           <div className="accordion-header">
-            <img src="/src/assets/images/icon-star.svg" alt="star"/>
+            <img src="/assets/images/icon-star.svg" alt="star"/>
             <h1>FAQs</h1>
           </div>
           <ul className="accordion-list">
             {accordionData.map((item, index) => (
-              <AccordionItem key={index} title={item.title} content={item.content} onClick={handleAccordion}/>
+              <AccordionItem key={index} index={index} title={item.title} content={item.content}/>
             ))}
           </ul>
           <div className="attribution">
-            <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
+            <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
               &nbsp;Coded by&nbsp;<a href="https://github.com/eestaniel" target="_blank" rel="noreferrer">eestaniel</a>.
             </p>
           </div>
