@@ -1,4 +1,3 @@
-import {useEffect} from 'react'
 import AccordionItem from "./components/AccordionItem.jsx";
 import './App.css'
 
