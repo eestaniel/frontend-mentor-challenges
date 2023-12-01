@@ -1,0 +1,219 @@
+:root {
+    --ff-accent: 'Fraunces', serif;
+    --ff-base: 'Montserrat', sans-serif;
+}
+
+/* Reset default values */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    line-height: 0.8125;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+body {
+    display: grid;
+    font-family: var(--ff-base);
+    font-weight: 400;
+    font-size: 1rem;
+    height: 100vh;
+    background-color: hsl(25deg 38% 92%);
+    place-items: center;
+}
+
+.container {
+    margin: 1rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: hsl(0deg 0% 100%);
+
+}
+
+.product-container {
+    padding: 1.5rem;
+}
+
+.product__category {
+    color: hsl(240deg 3% 56%);
+    letter-spacing: 4px;
+    font-size: .875rem;
+}
+
+.product__header {
+    font-family: var(--ff-accent);
+    line-height: 1.1;
+    font-size: 1.875rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+.product__paragraph {
+    margin-top: 1rem;
+    color: hsl(240deg 3% 52%);
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.product__price {
+    font-family: var(--ff-accent);
+    margin-top: 1.375rem;
+    font-size: 2rem;
+    color: hsl(157deg 30% 38%);
+    display: flex;
+    place-items: center;
+    gap: 0.375rem;
+}
+
+.product__old-price {
+    margin-left: 0.635rem;
+    font-size: 0.875rem;
+    font-family: var(--ff-base);
+    color: hsl(231deg 4% 51%);
+    text-decoration: line-through;
+}
+
+.button {
+    width: 100%;
+    border: none;
+    padding: .75rem 2.875rem;
+    margin-top: 0.75rem;
+    background-color: hsl(158deg 35% 37%);
+    color: hsl(161deg 95% 96%);
+    border-radius: 0.5rem;
+    position: relative;
+}
+.button__icon[datatype="icon"] {
+    content: "";
+    background-image: url("images/icon-cart.svg");
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 32%;
+    left: 23%;
+
+}
+
+.button:hover{
+    background-color: hsl(156deg 42% 18%);
+    cursor: pointer;
+}
+
+@media (min-width: 555px) {
+    .container {
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        max-width: 600px;
+        max-height: 450px;
+        height: auto;
+    }
+    .container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .product-container {
+        padding-top: 0.635rem;
+        padding-right: 2rem;
+    }
+
+
+    .product__header {
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin-top: 1rem;
+    }
+    .product__paragraph {
+        margin-top: 1.5rem;
+        line-height: 1.65;
+    }
+
+    .product__price {
+        margin-top: 1.5rem;
+    }
+
+    .button {
+        margin-top: 1.25rem;
+        max-width: 235px;
+        width: 100%;=
+    }
+
+    .button__icon[datatype="icon"] {
+        top: 32%;
+        left: 18%;
+
+    }
+
+
+}
