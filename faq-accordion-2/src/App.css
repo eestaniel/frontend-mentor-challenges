@@ -89,7 +89,7 @@ body {
     position: absolute;
     top: -6rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 32px 56px  rgb(80 0 118/.1);
+    box-shadow: 0 32px 56px rgb(80 0 118/.1);
 
     .accordion-header {
         display: flex;
@@ -180,6 +180,23 @@ body {
                 padding-top: 1.5rem;
             }
         }
+
+
+    }
+
+    .attribution {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        position: relative;
+
+        & p {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+        }
+
     }
 }
 
@@ -192,6 +209,7 @@ body {
             & img {
                 height: 2rem;
             }
+
             & h1 {
                 font-size: 3.5rem;
             }

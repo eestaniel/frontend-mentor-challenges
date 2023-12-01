@@ -71,8 +71,15 @@ export default function App() {
               <AccordionItem key={index} title={item.title} content={item.content} onClick={handleAccordion}/>
             ))}
           </ul>
+          <div className="attribution">
+            <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
+              &nbsp;Coded by&nbsp;<a href="https://github.com/eestaniel" target="_blank" rel="noreferrer">eestaniel</a>.
+            </p>
+          </div>
         </div>
+
       </main>
+
     </>
   )
 }
