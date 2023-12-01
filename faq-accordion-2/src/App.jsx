@@ -23,29 +23,11 @@ export default function App() {
     },
   ]
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 512px)');
-    const changeHandler = (e) => {
-      const imgContainer = document.querySelector('.img-container img');
-      imgContainer.src = e.matches
-        ? '/assets/images/background-pattern-mobile.svg'
-        : '/assets/images/background-pattern-desktop.svg';
-    };
-
-    mediaQuery.addEventListener('change', changeHandler);
-    changeHandler(mediaQuery);
-
-    return () => {
-      mediaQuery.removeEventListener('change', changeHandler);
-    };
-  }, []);
-
-
   return (
     <>
-      <header className="img-container">
-        <img src="/assets/images/background-pattern-mobile.svg" alt="bg_img"/>
-      </header>
+      <div className="img-container">
+
+      </div>
       <main className="main-container">
         <div className="accordion-wrapper">
           <div className="accordion-header">
