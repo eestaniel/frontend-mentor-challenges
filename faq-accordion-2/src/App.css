@@ -188,11 +188,13 @@ body {
         width: 100%;
         position: relative;
 
+
         & p {
             display: flex;
             flex-direction: row;
             position: absolute;
             bottom: -5rem;
+            white-space: nowrap;
 
             & a {
                 text-decoration: none;
