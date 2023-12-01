@@ -1,8 +1,27 @@
 import {useEffect} from 'react'
-
+import AccordionItem from "./components/AccordionItem.jsx";
 import './App.css'
 
 export default function App() {
+
+  const accordionData = [
+    {
+      title: 'What is Frontend Mentor, and how will it help me?',
+      content: 'Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It’s suitable for all levels and ideal for portfolio building.'
+    },
+    {
+      title: 'Is Frontend Mentor free?',
+      content: 'Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.'
+    },
+    {
+      title: 'Can I use Frontend Mentor projects in my portfolio?',
+      content: 'Yes, you can use projects completed on Frontend Mentor in your portfolio. It\'s an excellent way to showcase your skills to potential employers!'
+    },
+    {
+      title: 'How can I get help if I\'m stuck on a challenge?',
+      content: 'The best place to get help is inside Frontend Mentor\'s Discord community. There\'s a help channel where you can ask questions and seek support from other community members.'
+    },
+  ]
 
   const handleAccordion = (e) => {
     const pElement = e.currentTarget.querySelector('p');
@@ -15,33 +34,26 @@ export default function App() {
         pElement.classList.add('hidden');
       }
     }
-
-    // change img src
-    const imgElement = e.currentTarget.querySelector('img');
-    if (imgElement) {
-      if (imgElement.getAttribute('src') === '/src/assets/images/icon-plus.svg') {
-        imgElement.setAttribute('src', '/src/assets/images/icon-minus.svg');
-      } else {
-        imgElement.setAttribute('src', '/src/assets/images/icon-plus.svg');
-      }
-    }
   }
 
-  function updateImageSource() {
-    const imgContainer = document.querySelector('.img-container img');
-    if (window.innerWidth <= 512) {
-      imgContainer.src = '/src/assets/images/background-pattern-mobile.svg';
-    } else {
-      imgContainer.src = '/src/assets/images/background-pattern-desktop.svg';
-    }
-  }
 
   useEffect(() => {
-    window.addEventListener('resize', updateImageSource);
+    const mediaQuery = window.matchMedia('(max-width: 512px)');
+    const changeHandler = (e) => {
+      const imgContainer = document.querySelector('.img-container img');
+      imgContainer.src = e.matches
+        ? '/src/assets/images/background-pattern-mobile.svg'
+        : '/src/assets/images/background-pattern-desktop.svg';
+    };
+
+    mediaQuery.addEventListener('change', changeHandler);
+    changeHandler(mediaQuery);
+
     return () => {
-      window.removeEventListener('resize', updateImageSource);
-    }
-  }, [])
+      mediaQuery.removeEventListener('change', changeHandler);
+    };
+  }, []);
+
 
   return (
     <>
@@ -55,42 +67,9 @@ export default function App() {
             <h1>FAQs</h1>
           </div>
           <ul className="accordion-list">
-            <li onClick={(e) => handleAccordion(e)}>
-              <div className="accordion-question">
-                <h3>What is Frontend Mentor, and how will it help me?</h3>
-                <img src="/src/assets/images/icon-plus.svg" alt="plus"/>
-              </div>
-              <p className="hidden">Frontend Mentor offers realistic coding challenges to help developers improve their
-                frontend coding
-                skills with projects in HTML, CSS, and JavaScript. It’s suitable for all levels and ideal for portfolio
-                building.</p>
-            </li>
-            <li className="border" onClick={(e) => handleAccordion(e)}>
-              <div className="accordion-question">
-                <h3>Is Frontend Mentor free?</h3>
-                <img src="/src/assets/images/icon-plus.svg" alt="plus"/>
-              </div>
-              <p className="hidden">Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-                option providing access to a range of projects suitable for all skill levels.</p>
-            </li>
-            <li className="border" onClick={(e) => handleAccordion(e)}>
-              <div className="accordion-question">
-                <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
-                <img src="/src/assets/images/icon-plus.svg" alt="plus"/>
-              </div>
-              <p className="hidden">Yes, you can use projects completed on Frontend Mentor in your portfolio. It&apos;s
-                an excellent
-                way to showcase your skills to potential employers!</p>
-            </li>
-            <li className="border" onClick={(e) => handleAccordion(e)}>
-              <div className="accordion-question">
-                <h3>How can I get help if I&apos;m stuck on a challenge?</h3>
-                <img src="/src/assets/images/icon-plus.svg" alt="plus"/>
-              </div>
-              <p className="hidden">The best place to get help is inside Frontend Mentor&apos;s Discord community.
-                There&apos;s a help
-                channel where you can ask questions and seek support from other community members.</p>
-            </li>
+            {accordionData.map((item, index) => (
+              <AccordionItem key={index} title={item.title} content={item.content} onClick={handleAccordion}/>
+            ))}
           </ul>
         </div>
       </main>

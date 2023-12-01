@@ -105,7 +105,8 @@ body {
         & h1 {
             color: var(--clr-dark-purple);
             font-family: var(--ff-base);
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 2rem;
         }
     }
 
@@ -118,7 +119,7 @@ body {
             border-top: 1px solid var(--clr-light-pink);
         }
 
-        & li {
+        .accordion-item {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -187,8 +188,17 @@ body {
         max-width: 600px;
         padding: 2.5rem;
 
+        .accordion-header {
+            & img {
+                height: 2rem;
+            }
+            & h1 {
+                font-size: 3.5rem;
+            }
+        }
+
         .accordion-list {
-            & li {
+            .accordion-item {
                 & h3 {
                     font-size: 18px;
                 }
