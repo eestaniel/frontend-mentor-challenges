@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect} from 'react'
 
 import './App.css'
 
@@ -26,6 +26,22 @@ export default function App() {
       }
     }
   }
+
+  function updateImageSource() {
+    const imgContainer = document.querySelector('.img-container img');
+    if (window.innerWidth <= 512) {
+      imgContainer.src = '/src/assets/images/background-pattern-mobile.svg';
+    } else {
+      imgContainer.src = '/src/assets/images/background-pattern-desktop.svg';
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateImageSource);
+    return () => {
+      window.removeEventListener('resize', updateImageSource);
+    }
+  }, [])
 
   return (
     <>
