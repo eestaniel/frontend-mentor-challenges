@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/src/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-pink: hsl(281, 83%, 54%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+    --fs-normal: 1rem;
+    --ff-base: 'WorkSans';
+}
+
+body {
+    background-color: var(--clr-light-pink);
+}
+
+#root {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    min-width: 100vw;
+
+    & img {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+
+.accordion-wrapper {
+    height: fit-content;
+    max-width: 328px;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    position: absolute;
+    top: -6rem;
+    margin-bottom: 1.5rem;
+
+    .accordion-header {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+
+        & img {
+            aspect-ratio: 1/1;
+            height: 21px;
+        }
+
+        & h1 {
+            color: var(--clr-dark-purple);
+            font-family: var(--ff-base);
+            font-weight: bold;
+        }
+    }
+
+    .accordion-list {
+        list-style-type: none;
+        height: fit-content;
+        padding-left: 0;
+
+        & .border {
+            border-top: 1px solid var(--clr-light-pink);
+        }
+
+        & li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-block: 1.25rem;
+
+
+            .accordion-question {
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+                justify-content: space-between;
+                height: 100%;
+                flex-grow: 1;
+            }
+
+            & h3 {
+                font-family: 'WorkSans', sans-serif;
+                font-weight: 600;
+                color: var(--clr-dark-purple);
+                font-size: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--clr-pink);
+                }
+            }
+
+            & img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            & p {
+                font-family: 'WorkSans', sans-serif;
+                font-size: 14px;
+                color: var(--clr-grayish-purple);
+            }
+
+            .hidden {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: max-height 150ms ease-out, opacity 150ms;
+            }
+
+            .visible {
+                max-height: 100%;
+                opacity: 1;
+                transition: max-height 150ms ease-out, opacity 150ms;
+                padding-top: 1.5rem;
+            }
+        }
+    }
+}
