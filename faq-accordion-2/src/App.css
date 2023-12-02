@@ -167,12 +167,17 @@ body {
                 max-height: 0;
                 opacity: 0;
                 overflow: hidden;
-                transition: 300ms;
+                transition: 300ms ease-in-out;
+
+                .hidden::after {
+                    max-height: 0;
+                }
             }
 
             .visible {
+                max-height: 10rem;
                 opacity: 1;
-                transition: 300ms;
+                transition: 300ms ease-in-out;
                 padding-top: 1.5rem;
             }
         }
