@@ -10,6 +10,7 @@ This repository contains my solutions to the Frontend Mentor Challenges. Each di
 5. [Four-Card-Feature-Section](four-card-feature-section/README.md)
 6. [Interactive Rating Component](interactive-rating-component/README.md)
 7. [Intro Component with Signup Form](intro-component-with-signup-form-master/README.md)
+8. [Newsletter Signup Form](newsletter/README.md)
 8. [NFT Preview Card Component](nft-preview-card-component/README.md)
 9. [Order Summary Component](order-summary-component/README.md)
 10. [Product-Preview-Card-Component](product-preview-card-component/README.md)
