@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/newsletter-with-react-ym0vp0_oO-)
 - Live Site URL: [Live Site](https://newsletter-ee.netlify.app/)
 
 ## My process
