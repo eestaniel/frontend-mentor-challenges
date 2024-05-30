@@ -1,14 +1,27 @@
-import {formSchema} from '../utils/formSchema';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {useForm} from 'react-hook-form';
+import { formSchema } from '../../utils/formSchema.js';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 import * as Form from '@radix-ui/react-form';
-import mobileImage from '../assets/images/illustration-sign-up-mobile.svg';
-import iconList from '../assets/images/icon-list.svg'
+import MobileImage from "../images/MobileImage.jsx";
+import DesktopImage from "../images/DesktopImage.jsx";
+import IconList from "../images/IconList.jsx";
+import Button from "../button/Button.jsx";
 import * as styles from './newsletter.module.css';
+import {useEffect, useState} from "react";
 
-const Newsletter = ({setEmail}) => {
+const Newsletter = ({ setEmail }) => {
+  const [isMobile, setIsMobile] = useState(false);
 
-  const {register, handleSubmit, formState: {errors}} = useForm({
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  },[]);
+
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
@@ -27,15 +40,15 @@ const Newsletter = ({setEmail}) => {
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
             <div className={styles.listGroup}>
-              <img src={iconList} alt="list icon"/>
+              <IconList />
               <li>Product discovery and building what matters</li>
             </div>
             <div className={styles.listGroup}>
-              <img src={iconList} alt="list icon"/>
+              <IconList />
               <li>Measuring to ensure updates are a success</li>
             </div>
             <div className={styles.listGroup}>
-              <img src={iconList} alt="list icon"/>
+              <IconList />
               <li>And much more!</li>
             </div>
           </ul>
@@ -45,7 +58,7 @@ const Newsletter = ({setEmail}) => {
             <div className={styles.labelGroup}>
               <Form.Label className="FormLabel body-small">Email address</Form.Label>
               {errors.email && (
-                <Form.Message className={`FormMessage body-small ${styles.errorMessage}`}>
+                <Form.Message className={`FormMessage body-small ${errors.email && styles.errorMessage}`}>
                   {errors.email.message}
                 </Form.Message>
               )}
@@ -54,24 +67,20 @@ const Newsletter = ({setEmail}) => {
               {...register('email')}
               type="email"
               required
-              className="Input"
+              className={`${styles.input} ${errors.email && styles.errorInput}`}
               placeholder="email@company.com"
               aria-invalid={errors.email ? 'true' : 'false'}
             />
-
           </Form.Field>
-
           <Form.Submit asChild>
-            <button className="Button body-bold">
-              Subscribe to monthly newsletter
-            </button>
+            <Button
+              label="Subscribe to monthly newsletter"
+            />
           </Form.Submit>
         </Form.Root>
-
-
       </section>
       <figure>
-        <img src={mobileImage} alt="Illustration of a person checking their phone" className="image"/>
+        {isMobile ? <MobileImage /> : <DesktopImage />}
       </figure>
     </div>
   );

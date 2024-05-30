@@ -1,0 +1,19 @@
+.button {
+    margin-top: 1.5rem;
+    padding: 1.125rem 3rem;
+    white-space: nowrap;
+    color: var(--white);
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: var(--dark-navy);
+
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(to right top, #FF527B, #FF6A3A );
+        box-shadow: 0 16px 32px 0 hsla(4, 100%, 67%, 25%);
+    }
+}
+
+
