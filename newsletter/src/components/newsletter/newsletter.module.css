@@ -131,6 +131,12 @@
             margin-inline: 0;
             padding-left: 2.5rem;
             padding-right: 4rem;
+
+            & .textWrapper {
+                & h1 {
+                    font-size: 3.5rem;
+                }
+            }
         }
 
         & figure {
