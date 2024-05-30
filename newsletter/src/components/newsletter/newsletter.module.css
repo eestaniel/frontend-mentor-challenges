@@ -129,28 +129,35 @@
         min-height: fit-content;
         background-color: var(--white);
         border-radius: 2.25rem;
+        justify-content: space-between;
+        align-items: center;
 
         & .textContent {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
             margin-inline: 0;
-            padding-block: 6.125rem;
-            padding-left: 2.5rem;
-            padding-right: 4rem;
+            max-width: 376px;
+            width: 100%;
+            flex-grow: 1;
+            margin-left: 2.5rem;
 
             & .textWrapper {
                 margin-block: 0;
 
+
                 & li {
-                    white-space: nowrap;
                 }
 
                 & h1 {
                     font-size: 3.5rem;
-                    white-space: nowrap;
                 }
             }
+        }
+
+        & .formRoot {
+            width: 100%;
         }
 
         & figure {

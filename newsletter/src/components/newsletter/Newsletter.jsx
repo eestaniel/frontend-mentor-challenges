@@ -53,7 +53,7 @@ const Newsletter = ({ setEmail }) => {
             </li>
           </ul>
         </div>
-        <Form.Root onSubmit={handleSubmit(onSubmit)} className="FormRoot" noValidate>
+        <Form.Root onSubmit={handleSubmit(onSubmit)} className={styles.formRoot} noValidate>
           <Form.Field className={styles.formField} name="email">
             <div className={styles.labelGroup}>
               <Form.Label className="FormLabel body-small">Email address</Form.Label>
