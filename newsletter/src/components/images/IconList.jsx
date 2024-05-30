@@ -1,4 +1,6 @@
+import {useId} from 'react'
 const IconList = () => {
+  const id = useId();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,9 +8,9 @@ const IconList = () => {
       height="21"
       viewBox="0 0 21 21"
       role="img"
-      aria-labelledby="iconListTitle"
+      aria-labelledby={`${id}-title`}
     >
-      <title id="iconListTitle">Checkmark in a Circle</title>
+      <title id={`${id}-title`}>Checkmark in a Circle</title>
       <g fill="none">
         <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
         <path stroke="#FFF" strokeWidth="2" d="M6 11.381 8.735 14 15 8"/>

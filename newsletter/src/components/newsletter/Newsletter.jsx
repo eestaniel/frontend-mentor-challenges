@@ -39,18 +39,18 @@ const Newsletter = ({ setEmail }) => {
           <h1 className="heading">Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
-            <div className={styles.listGroup}>
-              <IconList />
-              <li>Product discovery and building what matters</li>
-            </div>
-            <div className={styles.listGroup}>
-              <IconList />
-              <li>Measuring to ensure updates are a success</li>
-            </div>
-            <div className={styles.listGroup}>
-              <IconList />
-              <li>And much more!</li>
-            </div>
+            <li className={styles.listGroup}>
+              <IconList/>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li className={styles.listGroup}>
+              <IconList/>
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li className={styles.listGroup}>
+              <IconList/>
+              <span>And much more!</span>
+            </li>
           </ul>
         </div>
         <Form.Root onSubmit={handleSubmit(onSubmit)} className="FormRoot" noValidate>
