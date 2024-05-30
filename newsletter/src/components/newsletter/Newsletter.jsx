@@ -1,6 +1,6 @@
-import { formSchema } from '../../utils/formSchema.js';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import {formSchema} from '../../utils/formSchema.js';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {useForm} from 'react-hook-form';
 import * as Form from '@radix-ui/react-form';
 import MobileImage from "../images/MobileImage.jsx";
 import DesktopImage from "../images/DesktopImage.jsx";
@@ -9,19 +9,24 @@ import Button from "../button/Button.jsx";
 import * as styles from './newsletter.module.css';
 import {useEffect, useState} from "react";
 
-const Newsletter = ({ setEmail }) => {
+const Newsletter = ({setEmail}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    const handleMediaQueryChange = (e) => {
+      setIsMobile(e.matches);
     };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  },[]);
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+    // Set initial value
+    handleMediaQueryChange(mediaQuery);
+
+    // Listen for changes
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    return () => mediaQuery.removeEventListener('change', handleMediaQueryChange);
+  }, []);
+
+  const {register, handleSubmit, formState: {errors}} = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
@@ -80,7 +85,7 @@ const Newsletter = ({ setEmail }) => {
         </Form.Root>
       </section>
       <figure>
-        {isMobile ? <MobileImage /> : <DesktopImage />}
+        {isMobile ? <MobileImage/> : <DesktopImage/>}
       </figure>
     </div>
   );
