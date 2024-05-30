@@ -6,7 +6,7 @@ import mobileImage from '../assets/images/illustration-sign-up-mobile.svg';
 import iconList from '../assets/images/icon-list.svg'
 import * as styles from './newsletter.module.css';
 
-const Newsletter = () => {
+const Newsletter = ({setEmail}) => {
 
   const {register, handleSubmit, formState: {errors}} = useForm({
     resolver: zodResolver(formSchema),
@@ -16,8 +16,7 @@ const Newsletter = () => {
   });
 
   const onSubmit = (data) => {
-    console.log('hi')
-    console.log(data);
+    setEmail(data.email);
   };
 
   return (
@@ -42,7 +41,7 @@ const Newsletter = () => {
           </ul>
         </div>
         <Form.Root onSubmit={handleSubmit(onSubmit)} className="FormRoot" noValidate>
-          <Form.Field className="FormField" name="email">
+          <Form.Field className={styles.formField} name="email">
             <div className={styles.labelGroup}>
               <Form.Label className="FormLabel body-small">Email address</Form.Label>
               {errors.email && (

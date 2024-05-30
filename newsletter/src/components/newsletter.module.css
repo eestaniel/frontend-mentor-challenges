@@ -51,6 +51,12 @@
         }
     }
 
+    & .formField {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     & .labelGroup {
         display: flex;
         flex-direction: row;
