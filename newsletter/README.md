@@ -41,6 +41,7 @@ Users should be able to:
 - HTML
 - CSS
 - [React](https://reactjs.org/) - JS library
-- [Radix](https://radix-ui.com/) - For styling input
+- [Radix](https://radix-ui.com/) - Styling
 - [React Hook Form](https://react-hook-form.com/) - For form validation
+- [Vite](https://vitejs.dev/) - Build tool
 
