@@ -9,6 +9,7 @@
     background-color: var(--white);
     justify-content: start;
     gap: 2.5rem;
+    position: relative;
 
 
     & .textContent {

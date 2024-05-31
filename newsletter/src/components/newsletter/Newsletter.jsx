@@ -3,7 +3,7 @@ import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 import * as Form from '@radix-ui/react-form';
 import MobileImage from "../images/MobileImage.jsx";
-import DesktopImage from "../images/DesktopImage.jsx";
+import DesktopImage from "../../assets/images/illustration-sign-up-desktop.svg"
 import IconList from "../images/IconList.jsx";
 import Button from "../button/Button.jsx";
 import * as styles from './newsletter.module.css';
@@ -85,7 +85,8 @@ const Newsletter = ({setEmail}) => {
         </Form.Root>
       </section>
       <figure>
-        {isMobile ? <MobileImage/> : <DesktopImage/>}
+        {isMobile ? <MobileImage/> :
+          <img src={DesktopImage} alt="Illustration of a person signing up for a newsletter"/>}
       </figure>
     </div>
   );
