@@ -64,6 +64,10 @@ p, li {
     color: var(--wenge-brown);
 }
 
+body {
+    min-height: 100vh;
+}
+
 main {
     height: fit-content;
     background-color: var(--white);
@@ -180,7 +184,7 @@ tr:last-child td {
         justify-content: center;
         align-items: center;
         background-color: var(--eggshell);
-        padding: 3rem;
+        padding: 7.75rem;
     }
 
     main {
