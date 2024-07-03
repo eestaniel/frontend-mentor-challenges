@@ -37,9 +37,13 @@ main {
     box-shadow: 0.5rem 0.5rem 0 0 black;
     max-width: 384px;
     transition: ease all 150ms;
+    border: 1px solid black;
+
 
     &:hover {
         cursor: pointer;
+        box-shadow: 1rem 1rem 0 0 black;
+
 
         h1 {
             color: var(--yellow);
@@ -61,13 +65,14 @@ main {
     .category {
         padding: 0.25rem 0.75rem;
         background-color: var(--yellow);
-        width: 4.625rem;
+        width: fit-content;
         border-radius: 0.25rem;
 
         p {
             font-size: 0.75rem;
             font-weight: 800;
             color: var(--black);
+            white-space: nowrap;
         }
     }
 
@@ -109,9 +114,6 @@ main {
 }
 
 @media screen and (min-width: 384px) {
-    main {
-        box-shadow: 1rem 1rem 0 0 black;
-    }
     .content {
         .category {
             width: 5.125rem;
