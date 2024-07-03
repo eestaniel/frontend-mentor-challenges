@@ -1,0 +1,125 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: var(--off-black);
+    padding: 7.25rem 1.5rem;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-grey);
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 0.75rem;
+    max-width: 384px;
+    align-self: center;
+    width: 100%;
+    transition: ease all 150ms;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    img {
+        border-radius: 32rem;
+        height: 5.5rem;
+        width: 5.5rem;
+
+    }
+
+    .name-location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        width: 100%;
+
+        h1 {
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 150%;
+            font-size: 1.5rem;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: var(--green);
+            font-family: 'Inter', sans-serif;
+            line-height: 150%;
+            font-size: 0.875rem;
+            letter-spacing: 0;
+            font-weight: 700;
+        }
+    }
+
+    p {
+        color: var(--white);
+        font-family: 'Inter', sans-serif;
+        line-height: 150%;
+        font-size: 0.875rem;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+}
+
+section {
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        gap: 1rem;
+
+        li {
+            background-color: var(--grey);
+            width: 100%;
+            border-radius: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            line-height: 150%;
+            font-size: 0.875rem;
+            letter-spacing: 0;
+            font-weight: 700;
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--green);
+                color: var(--grey);
+                caret-color: black;
+            }
+
+            a {
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                text-decoration: none;
+                color: var(--white);
+                padding-block: 0.75rem;
+                justify-content: center;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 481px) {
+    main {
+        padding: 2.5rem;
+    }
+}
