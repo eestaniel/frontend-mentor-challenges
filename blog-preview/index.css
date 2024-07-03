@@ -37,9 +37,13 @@ main {
     box-shadow: 0.5rem 0.5rem 0 0 black;
     max-width: 384px;
     transition: ease all 150ms;
+    border: 1px solid black;
+
 
     &:hover {
         cursor: pointer;
+        box-shadow: 1rem 1rem 0 0 black;
+
 
         h1 {
             color: var(--yellow);
@@ -109,9 +113,6 @@ main {
 }
 
 @media screen and (min-width: 384px) {
-    main {
-        box-shadow: 1rem 1rem 0 0 black;
-    }
     .content {
         .category {
             width: 5.125rem;
