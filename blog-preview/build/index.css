@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url("assets/fonts/Figtree-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 9.75rem 1.5rem;
+    align-items: center;
+}
+
+p, h1 {
+    font-family: Figtree, serif;
+    line-height: 150%;
+}
+
+main {
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 0 0 black;
+    max-width: 384px;
+    transition: ease all 150ms;
+
+    &:hover {
+        cursor: pointer;
+
+        h1 {
+            color: var(--yellow);
+        }
+    }
+}
+
+.blog_image {
+    border-radius: 0.625rem;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .category {
+        padding: 0.25rem 0.75rem;
+        background-color: var(--yellow);
+        width: 4.625rem;
+        border-radius: 0.25rem;
+
+        p {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--black);
+        }
+    }
+
+    .published_date {
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: var(--black);
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--black);
+    }
+
+    .description {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--grey);
+    }
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+
+    img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        font-weight: 800;
+        color: var(--black);
+    }
+}
+
+@media screen and (min-width: 384px) {
+    main {
+        box-shadow: 1rem 1rem 0 0 black;
+    }
+    .content {
+        .category {
+            width: 5.125rem;
+            text-align: center;
+
+            p {
+                font-size: 0.875rem;
+            }
+        }
+
+        .published_date {
+            font-size: 0.875rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+    }
+}
+

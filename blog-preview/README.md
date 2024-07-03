@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
-- Live Site URL: [Live Site]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/blog-preview-card-bm_8320FhH)
+- Live Site URL: [Live Site](https://blog-preview-card-ee.netlify.app/)
 
 ## My process
 
